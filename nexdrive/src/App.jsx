@@ -1,5 +1,8 @@
 import NavBar from './Components/Navbar';
 import Home from './Components/Home/Home';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+
+
 import './App.css'
 import {
   BrowserRouter as Router,
@@ -8,6 +11,7 @@ import {
   Navigate
 } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from './Components/Footer';
 function App() {
   return (
     <>
@@ -18,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
           </Routes>
         </div>
+        <Footer />
       </Router>
     </>
   )

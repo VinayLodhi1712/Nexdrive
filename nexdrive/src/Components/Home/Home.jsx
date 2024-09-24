@@ -3,11 +3,40 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
 import './Home.css'; // Import CSS for additional styling
 import cam from "../../assets/cam.png";
 import fleet from "../../assets/fleet.png";
+import news from "../../assets/news.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faVideo, faSearch, faDollarSign, faEyeSlash, faLocationDot, faAmbulance, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import FAQAccordion from './FAQAccordion';
+import Carousel from "./Carousel";
 const Home = () => {
     const [showCookieNotification, setShowCookieNotification] = useState(true);
 
+    const [thumbsUpCount, setThumbsUpCount] = useState([10, 5, 8]);
+    const [thumbsDownCount, setThumbsDownCount] = useState([2, 1, 0]);
+    const [thumbsUpClicked, setThumbsUpClicked] = useState([false, false, false]);
+    const [thumbsDownClicked, setThumbsDownClicked] = useState([false, false, false]);
+
+    const increaseThumbsUp = (index) => {
+        const newCounts = [...thumbsUpCount];
+        newCounts[index] += 1;
+        setThumbsUpCount(newCounts);
+        setThumbsUpClicked((prev) => {
+            const updated = [...prev];
+            updated[index] = !updated[index]; // Toggle clicked state
+            return updated;
+        });
+    };
+
+    const increaseThumbsDown = (index) => {
+        const newCounts = [...thumbsDownCount];
+        newCounts[index] += 1;
+        setThumbsDownCount(newCounts);
+        setThumbsDownClicked((prev) => {
+            const updated = [...prev];
+            updated[index] = !updated[index]; // Toggle clicked state
+            return updated;
+        });
+    };
     const handleAcceptCookies = () => {
         setShowCookieNotification(false);
     };
@@ -223,14 +252,144 @@ const Home = () => {
                     <FontAwesomeIcon icon={faSearch} className="search-icon" />
                 </div>
                 <div className="reviews-section">
-                    <span className="reviews-count">Reviews: <span className="reviews-number">4,341</span></span>
-                    <select className="dropdown">
-                        <option value="most-recent">Most Recent</option>
-                        <option value="highest-rated">Highest Rated</option>
-                    </select>
+                    <div className="reviews-tabs">
+                        <span className="reviews-count active">Reviews: <span className="reviews-number">4,341</span></span>
+                        <select className="dropdown">
+                            <option value="most-recent">Most Recent</option>
+                            <option value="highest-rated">Highest Rated</option>
+                        </select>
+                    </div>
+                    <div className="underline"></div>
+
+                    <div className="reviews-container">
+                        <div className="review-box">
+                            <h4 className="reviewer-name">Kendrick T.</h4>
+                            <p className="reviewer-nation">United States</p>
+                            <span className="verified-buyer">Verified Buyer</span> <span className="review-date">| March 5, 2023</span>
+                            <div className="star-rating">★★★★★</div>
+                            <p className="highlighted-words">Love the dash cam!</p>
+                            <p className="review-content">
+                                I’ve been using the NexDrive dash cam for a few months now, and it has significantly improved my driving experience. The clarity is incredible, and it’s very user-friendly. Highly recommend it to everyone!
+                            </p>
+                            <div className="helpfulness">
+                                Was this helpful?
+                                <span
+                                    className={`thumbs-up ${thumbsUpClicked[0] ? 'clicked' : ''}`}
+                                    onClick={() => increaseThumbsUp(0)}
+                                >
+                                    👍 <span className="thumbs-count">{thumbsUpCount[0]}</span>
+                                </span>
+                                <span
+                                    className={`thumbs-down ${thumbsDownClicked[0] ? 'clicked' : ''}`}
+                                    onClick={() => increaseThumbsDown(0)}
+                                >
+                                    👎 <span className="thumbs-count">{thumbsDownCount[0]}</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div className="review-box">
+                            <h4 className="reviewer-name">Chrishtopher D.</h4>
+                            <p className="reviewer-nation">Canada</p>
+                            <span className="verified-buyer">Verified Buyer</span> <span className="review-date">| March 10, 2023</span>
+                            <div className="star-rating">★★★★☆</div>
+                            <p className="highlighted-words">It's okay!</p>
+                            <p className="review-content">
+                                The only problem with this camera is it's very slow. Viewing your car when you got a notification or just checking takes more than a minute. Plus, parking mode is useless unless someone hits your car very hard.
+                            </p>
+                            <div className="helpfulness">
+                                <span className="helpfulness-text">Was this helpful?</span>
+                                <span
+                                    className={`thumbs-up ${thumbsUpClicked[1] ? 'clicked' : ''}`}
+                                    onClick={() => increaseThumbsUp(1)}
+                                >
+                                    👍 <span className="thumbs-count">{thumbsUpCount[1]}</span>
+                                </span>
+                                <span
+                                    className={`thumbs-down ${thumbsDownClicked[1] ? 'clicked' : ''}`}
+                                    onClick={() => increaseThumbsDown(1)}
+                                >
+                                    👎 <span className="thumbs-count">{thumbsDownCount[1]}</span>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div className="review-box">
+                            <h4 className="reviewer-name">Ali Khan</h4>
+                            <p className="reviewer-nation">UK</p>
+                            <span className="verified-buyer">Verified Buyer</span> <span className="review-date">| March 15, 2023</span>
+                            <div className="star-rating">★★★★★</div>
+                            <p className="highlighted-words">Highly recommended!</p>
+                            <p className="review-content">
+                                Highly recommended! The NexDrive dash cam has been a game changer for me. It gives me peace of mind knowing that my drives are being recorded. Excellent video quality!
+                            </p>
+                            <div className="helpfulness">
+                                <span className="helpfulness-text">Was this helpful?</span>
+                                <span
+                                    className={`thumbs-up ${thumbsUpClicked[1] ? 'clicked' : ''}`}
+                                    onClick={() => increaseThumbsUp(1)}
+                                >
+                                    👍 <span className="thumbs-count">{thumbsUpCount[1]}</span>
+                                </span>
+                                <span
+                                    className={`thumbs-down ${thumbsDownClicked[1] ? 'clicked' : ''}`}
+                                    onClick={() => increaseThumbsDown(1)}
+                                >
+                                    👎 <span className="thumbs-count">{thumbsDownCount[1]}</span>
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div className="load-more-reviews">
+                        <span className="load-more-text">Load More Reviews  →</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div className="section6">
+                <h1 className='centered-heading head3'>Real NexDrive Stories</h1>
+                <div className="stories-container">
+                    <div className="story-box">
+                        <img src={news} alt="Story 1" className="story-image" />
+
+                        <p className="story-description">"There are three sides to every story. My story, the other driver;s story and the truth. Nexdrive gives you the truth."</p>
+                        <h3 className="story-title">Michael Gargan Merrick, New York</h3>
+                    </div>
+                    <div className="story-box">
+                        <img src={news} alt="Story 1" className="story-image" />
+
+                        <p className="story-description">"There are three sides to every story. My story, the other driver;s story and the truth. Nexdrive gives you the truth."</p>
+                        <h3 className="story-title">Michael Gargan Merrick, New York</h3>
+                    </div>
+                    <div className="story-box">
+                        <img src={news} alt="Story 1" className="story-image" />
+
+                        <p className="story-description">"There are three sides to every story. My story, the other driver;s story and the truth. Nexdrive gives you the truth."</p>
+                        <h3 className="story-title">Michael Gargan Merrick, New York</h3>
+                    </div>
+                    <div className="story-box">
+                        <img src={news} alt="Story 1" className="story-image" />
+
+                        <p className="story-description">"There are three sides to every story. My story, the other driver;s story and the truth. Nexdrive gives you the truth."</p>
+                        <h3 className="story-title">Michael Gargan Merrick, New York</h3>
+                    </div>
                 </div>
             </div>
 
+            <div className="section7">
+                <h1 className='centered-heading head3'>Frequently Asked Questions?</h1>
+                <div className="faq-container">
+                    <FAQAccordion />
+                </div>
+            </div>
+
+
+          <div className="section8">
+            <h1 className='centered-heading head3'>Trusted by over 800 brands</h1>
+            <Carousel />
+          </div>
 
 
 

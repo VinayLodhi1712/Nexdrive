@@ -1,6 +1,6 @@
 .section1{
-    min-height: 100vh; /* Each section takes the full height of the viewport */
-    background-image: url('../../assets/bg.png'); /* Change path according to your project structure */
+    min-height: 100vh; 
+    background-image: url('../../assets/bg.png');
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -91,12 +91,12 @@
     margin: 0;
 }
 .grid-content p {
-    width: 100%; /* Adjust width as needed */
+    width: 100%; 
     text-align: center;
-    white-space: normal; /* Allows wrapping */
-    line-height: 1.5; /* Adjusts line spacing */
-    max-width: 250px; /* Adjust max width to limit paragraph width */
-    margin: 0 auto; /* Center the text horizontally */
+    white-space: normal; 
+    line-height: 1.5;
+    max-width: 250px;
+    margin: 0 auto; 
 }
 
 .grid-content {
@@ -110,35 +110,35 @@
 
 .bottom-half {
     display: flex;
-    width: 100%; /* Full width of the parent container */
+    width: 100%; 
 }
 
 .left-half {
-    flex: 1; /* Take up 50% of the space */
+    flex: 1; 
     display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
+    justify-content: center;
+    align-items: center; 
 }
 
 .camera-image {
-    max-width: 80%; /* Adjust max width as needed */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 80%;
+    height: auto; 
 }
 
 .right-half {
-    flex: 1; /* Take up 50% of the space */
+    flex: 1; 
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center the content vertically */
-    align-items: center; /* Center content horizontally */
-    padding: 20px; /* Add padding */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
 }
 
 .connected-text {
-    font-weight: bold; /* Make text bold */
-    font-size: 16px; /* Adjust font size */
-    margin-bottom: 4px; /* Space below the text */
-    text-align: center; /* Center the text */
+    font-weight: bold; 
+    font-size: 16px; 
+    margin-bottom: 4px; 
+    text-align: center; 
 }
 
 .right-heading {
@@ -160,15 +160,16 @@
 }
 
 .demo-button {
-    background-color: lightgreen; /* Light green background */
-    color: black; /* Black text color */
-    padding: 10px 15px; /* Padding for the button */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s; /* Smooth background transition */
-    width: auto; /* Set width to auto for the button */
+    background-color: lightgreen;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto;
 }
+
 
 .demo-button:hover {
     background-color: darkgreen; /* Change to darker green on hover */
@@ -190,41 +191,41 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Center text */
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
     gap: 15px;
 }
 
 .content-heading {
-    color: rgb(230, 207, 207); /* Set text color to white */
-    font-size: 2.5rem; /* Adjust size as needed */
+    color: rgb(230, 207, 207);
+    font-size: 2.5rem;
 }
 
 .btn-light-green {
-    background-color: lightgreen; /* Light green background */
-    color: black; /* Text color */
-    border: 2px solid lightgreen; /* Bootstrap primary border color */
-    padding: 8px 16px; /* Same padding as Bootstrap */
-    font-size: 1rem; /* Font size */
+    background-color: lightgreen;
+    color: black;
+    border: 2px solid lightgreen;
+    padding: 8px 16px;
+    font-size: 1rem;
     font-weight: 500;
-    text-transform: uppercase; /* Uppercase text */
-    cursor: not-allowed; /* Not clickable */
-    border-radius: 0.25rem; /* Same border radius as Bootstrap */
+    text-transform: uppercase;
+    cursor: not-allowed;
+    border-radius: 0.25rem;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-    margin-top: 20px; /* Smooth transition */
+    margin-top: 20px;
 }
 
 .btn-light-green:hover {
-    background-color: greenyellow; /* Slightly darker grey on hover */
-    border-color: greenyellow; /* Change border color on hover */
-    color: black; /* Keep text color black */
+    background-color: greenyellow;
+    border-color: greenyellow;
+    color: black;
 }
 
 .header {
     height: 50px;
     background-color: lightgreen;
-    position: relative; /* Allows centering with absolute positioning */
+    position: relative;
 }
 
 .header-text {
@@ -232,10 +233,10 @@
     font-size: 1.1rem;
     font-weight: 500;
     text-decoration: underline;
-    position: absolute; /* Make text absolutely positioned */
-    top: 50%; /* Move the text down 50% from the top */
-    left: 50%; /* Move the text 50% from the left */
-    transform: translate(-50%, -50%); /* Shift text back by half its own width and height */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .cookie-notification {
@@ -246,15 +247,16 @@
     background-color: white;
     padding: 15px;
     animation: slide-in 0.5s forwards;
-    border: 2px solid black; /* Dark black border */
-    border-radius: 0; /* Remove rounded corners */
+    border: 2px solid black;
+    border-radius: 0;
 }
 
 .cookie-title {
-    font-weight: bold; /* Make the first line bold */
+    font-weight: bold;
     text-align: left;
     margin-bottom: 3px;
 }
+
 
 .cookie-content {
     display: flex;
@@ -264,25 +266,24 @@
 
 .cookie-description {
     font-weight: 400;
-    text-align: left; /* Keep the description aligned to the left */
-    flex: 1; /* Take up remaining space on the left */
+    text-align: left;
+    flex: 1;
 }
 
 .cookie-buttons {
     display: flex;
-    justify-content: flex-end; /* Align buttons to the right */
+    justify-content: flex-end;
 }
 
 .cookie-buttons button {
-    margin-left: 10px; /* Add space between buttons */
+    margin-left: 10px;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .home {
-  min-height: 95vh;
+        min-height: 95vh;
     }
-    .content{
+    .content {
         gap: 8px;
     }
     .header {
@@ -291,58 +292,47 @@
     .header-text {
         font-size: 0.6rem;
     }
-    
-    
-    .content-heading{
+    .content-heading {
         font-size: 1.5rem;
     }
     .btn-light-green {
-        border: 2px solid lightgreen; /* Bootstrap primary border color */
-        padding: 4px 8px; /* Same padding as Bootstrap */
-        font-size: 0.8rem; /* Font size */
+        border: 2px solid lightgreen;
+        padding: 4px 8px;
+        font-size: 0.8rem;
         font-weight: 500;
     }
-    
     .cookie-notification {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px;
     }
-
     .cookie-title {
-        font-size: 0.9rem; /* Smaller font size for title */
+        font-size: 0.9rem;
     }
-
     .cookie-description {
-        font-size: 0.8rem; /* Smaller font size for description */
-        margin-bottom: 5px; /* Space between description and buttons */
+        font-size: 0.8rem;
+        margin-bottom: 5px;
     }
-
     .cookie-buttons button {
-        padding: 5px 10px; /* Adjust button padding for smaller screens */
-        font-size: 0.75rem; /* Reduce button font size */
+        padding: 5px 10px;
+        font-size: 0.75rem;
     }
-
     .cookie-content {
-        flex-direction: column; /* Stack content vertically */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: column;
+        align-items: flex-start;
     }
-
     .grid-container {
-        grid-template-columns: 1fr; /* Stack grid items vertically */
+        grid-template-columns: 1fr;
     }
-
     .bottom-half {
-        flex-direction: column; /* Stack left and right halves vertically */
-        align-items: center; /* Center align for better appearance */
+        flex-direction: column;
+        align-items: center;
     }
-
     .left-half, .right-half {
-        width: 100%; /* Ensure both halves take full width */
-        padding: 10px; /* Add padding for spacing */
+        width: 100%;
+        padding: 10px;
     }
-
     .camera-image {
-        max-width: 100%; /* Make image responsive */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -537,20 +527,34 @@
 }
 
 .reviews-section {
+    padding: 20px; /* Padding for the section */
+    width: 100%; /* Full width of the section */
+}
+
+.reviews-tabs {
     display: flex;
     justify-content: space-between; /* Space between items */
     align-items: center; /* Center vertically */
-    width: 100%; /* Take full width */
-    margin-top: 20px; /* Space between the search bar and reviews section */
 }
 
 .reviews-count {
     color: darkblue; /* Dark blue for the text */
-    text-decoration: underline; /* Underline for the text */
+    text-decoration: underline; /* Underline for the active tab */
+    font-weight: bold; /* Make active tab bold */
+    margin-right: 10px; /* Gap between "Reviews:" and the number */
+    font-size: 24px; /* Increase font size */
 }
 
 .reviews-number {
-    font-weight: bold; /* Bold for the number */
+    font-weight: normal; /* Normal weight for the number */
+    font-size: 24px; /* Increase font size */
+}
+
+.underline {
+    height: 2px; /* Height of the underline */
+    background-color: lightgrey; /* Light grey color for the underline */
+    width: 100%; /* Full width */
+    margin-top: 5px; /* Space above the underline */
 }
 
 .dropdown {
@@ -558,5 +562,170 @@
     border: 1px solid grey; /* Border for dropdown */
     border-radius: 5px; /* Rounded corners */
     background-color: white; /* Background color for dropdown */
+    width: 150px; /* Medium width for the dropdown */
+    cursor: pointer; /* Change cursor on hover */
 }
 
+
+.reviews-container {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between; /* Space between boxes */
+    margin-top: 20px; /* Margin above the review boxes */
+}
+
+.review-box {
+    background-color: #f8f8f8; /* Light grey background */
+    padding: 15px; /* Padding inside each box */
+    border-radius: 8px; /* Rounded corners */
+    width: 30%; /* Width of each review box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.reviewer-name {
+    font-weight: bold; /* Bold name */
+    margin-bottom: 5px; /* Space below name */
+}
+
+.reviewer-nation {
+    color: grey; /* Grey color for nation */
+    margin-bottom: 5px; /* Space below nation */
+}
+
+
+
+.highlighted-words {
+    font-weight: bold; /* Highlighted words in bold */
+    margin-bottom: 5px; /* Space below highlighted words */
+}
+
+.review-content {
+    color: #333; /* Darker text for content */
+}
+
+
+.review-box {
+    background-color: #f5f5f5; /* Light grey background for review box */
+    padding: 15px; /* Padding inside review box */
+    margin: 10px 0; /* Margin between review boxes */
+    border-radius: 5px; /* Slightly rounded corners */
+    position: relative; /* For positioning the Verified Buyer label */
+}
+
+.verified-buyer {
+    color: skyblue; /* Sky blue color for Verified Buyer */
+    font-size: 14px; /* Font size for Verified Buyer label */
+    margin-right: 10px; /* Space between label and date */
+}
+
+.review-date {
+    color: grey; /* Grey color for the review date */
+    font-size: 12px; /* Font size for review date */
+}
+
+.helpfulness {
+    margin-top: 10px; /* Space above the helpfulness section */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-end; /* Align all items to the right */
+}
+
+.helpfulness-text {
+    margin-right: 10px; /* Space between the text and thumbs */
+}
+
+.thumbs-up,
+.thumbs-down {
+    cursor: pointer; /* Pointer cursor for clickable icons */
+    color: rgb(98, 98, 167); /* Dark blue color for thumbs icons */
+    border: 1px solid rgb(91, 91, 158); /* Dark blue border for thumbs icons */
+    padding: 5px; /* Padding around thumbs icons */
+    border-radius: 3px; /* Rounded corners for border */
+    margin-right: 10px; /* Space between thumbs */
+    
+}
+
+.thumbs-up.clicked,
+.thumbs-down.clicked {
+    color: white; /* Change text color to white when clicked */
+    background-color: darkblue; /* Dark blue background when clicked */
+}
+
+.thumbs-count {
+    margin-left: 5px; /* Space between thumbs icon and count */
+}
+
+/* Optional: Style for star rating */
+.star-rating {
+    color: darkblue; /* Dark blue color for filled stars */
+    margin-bottom: 4px;
+}
+
+
+.load-more-reviews {
+    text-align: center; /* Center the text and icon */
+    margin: 20px 0; /* Space above and below the load more section */
+    color: darkblue; /* Light blue color for the text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.load-more-text {
+    font-size: 16px; /* Adjust font size as needed */
+    margin-right: 5px; /* Space between text and icon */
+}
+
+.section6 {
+    padding: 20px; /* Padding for the entire section */  
+    min-height: 100vh;
+    text-align: center;
+}
+
+.head3{
+    margin-bottom: 30px;
+}
+
+
+
+.stories-container {
+    display: grid; /* Use grid layout for positioning */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, auto); /* Two rows */
+    gap: 20px; /* Space between the story boxes */
+    max-width: 800px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.story-box {
+    background-color: #f9f9f9; /* Light grey background for story box */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text */
+    padding: 10px; /* Padding inside story box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.story-image {
+    width: 100%; 
+    border-radius: 8px; 
+}
+
+.story-title {
+    font-size: 18px;
+    margin: 10px 0 5px 0; 
+}
+
+.story-description {
+    font-size: 18px; 
+    color: #161515; 
+}
+
+.section7 {
+    padding: 20px 20px; 
+    min-height: 100vh;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 700px;  
+    margin: 0 auto;    
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
