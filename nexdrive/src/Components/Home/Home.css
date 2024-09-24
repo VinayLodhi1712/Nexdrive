@@ -1,0 +1,562 @@
+.section1{
+    min-height: 100vh; /* Each section takes the full height of the viewport */
+    background-image: url('../../assets/bg.png'); /* Change path according to your project structure */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 10px;
+}
+
+.section3{
+    display: flex;
+    min-height: 100vh;
+}
+.section4{
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.top-half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-heading {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Adds space between the heading and grid */
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 10px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(194, 186, 186);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon-container .fa-clock {
+    color: lightgreen;
+    font-size: 24px;
+}
+
+.icon-container .fa-eye-slash{
+    color: lightgreen;
+    font-size: 24px;
+}
+
+.icon-container .fa-dollar-sign{
+    color: lightgreen;
+    font-size: 24px;
+}
+
+.grid-heading {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.grid-item p {
+    margin: 0;
+}
+.grid-content p {
+    width: 100%; /* Adjust width as needed */
+    text-align: center;
+    white-space: normal; /* Allows wrapping */
+    line-height: 1.5; /* Adjusts line spacing */
+    max-width: 250px; /* Adjust max width to limit paragraph width */
+    margin: 0 auto; /* Center the text horizontally */
+}
+
+.grid-content {
+    margin-top: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-half {
+    display: flex;
+    width: 100%; /* Full width of the parent container */
+}
+
+.left-half {
+    flex: 1; /* Take up 50% of the space */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.camera-image {
+    max-width: 80%; /* Adjust max width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.right-half {
+    flex: 1; /* Take up 50% of the space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add padding */
+}
+
+.connected-text {
+    font-weight: bold; /* Make text bold */
+    font-size: 16px; /* Adjust font size */
+    margin-bottom: 4px; /* Space below the text */
+    text-align: center; /* Center the text */
+}
+
+.right-heading {
+    margin: 10px 0;  
+    text-align: center;
+    white-space: normal; 
+    line-height: 1.5;
+    max-width: 350px; 
+    margin: 0 auto; 
+    margin-bottom: 6px;
+}
+
+.description {
+    line-height: 1.5; 
+    margin-bottom: 20px; 
+    text-align: center;
+    max-width: 450px; 
+    margin: 0 auto; 
+}
+
+.demo-button {
+    background-color: lightgreen; /* Light green background */
+    color: black; /* Black text color */
+    padding: 10px 15px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth background transition */
+    width: auto; /* Set width to auto for the button */
+}
+
+.demo-button:hover {
+    background-color: darkgreen; /* Change to darker green on hover */
+}
+
+
+
+.demo-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: lightgreen;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    gap: 15px;
+}
+
+.content-heading {
+    color: rgb(230, 207, 207); /* Set text color to white */
+    font-size: 2.5rem; /* Adjust size as needed */
+}
+
+.btn-light-green {
+    background-color: lightgreen; /* Light green background */
+    color: black; /* Text color */
+    border: 2px solid lightgreen; /* Bootstrap primary border color */
+    padding: 8px 16px; /* Same padding as Bootstrap */
+    font-size: 1rem; /* Font size */
+    font-weight: 500;
+    text-transform: uppercase; /* Uppercase text */
+    cursor: not-allowed; /* Not clickable */
+    border-radius: 0.25rem; /* Same border radius as Bootstrap */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    margin-top: 20px; /* Smooth transition */
+}
+
+.btn-light-green:hover {
+    background-color: greenyellow; /* Slightly darker grey on hover */
+    border-color: greenyellow; /* Change border color on hover */
+    color: black; /* Keep text color black */
+}
+
+.header {
+    height: 50px;
+    background-color: lightgreen;
+    position: relative; /* Allows centering with absolute positioning */
+}
+
+.header-text {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: underline;
+    position: absolute; /* Make text absolutely positioned */
+    top: 50%; /* Move the text down 50% from the top */
+    left: 50%; /* Move the text 50% from the left */
+    transform: translate(-50%, -50%); /* Shift text back by half its own width and height */
+}
+
+.cookie-notification {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 15px;
+    animation: slide-in 0.5s forwards;
+    border: 2px solid black; /* Dark black border */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+.cookie-title {
+    font-weight: bold; /* Make the first line bold */
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.cookie-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cookie-description {
+    font-weight: 400;
+    text-align: left; /* Keep the description aligned to the left */
+    flex: 1; /* Take up remaining space on the left */
+}
+
+.cookie-buttons {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+}
+
+.cookie-buttons button {
+    margin-left: 10px; /* Add space between buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home {
+  min-height: 95vh;
+    }
+    .content{
+        gap: 8px;
+    }
+    .header {
+        height: 30px;
+    }
+    .header-text {
+        font-size: 0.6rem;
+    }
+    
+    
+    .content-heading{
+        font-size: 1.5rem;
+    }
+    .btn-light-green {
+        border: 2px solid lightgreen; /* Bootstrap primary border color */
+        padding: 4px 8px; /* Same padding as Bootstrap */
+        font-size: 0.8rem; /* Font size */
+        font-weight: 500;
+    }
+    
+    .cookie-notification {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .cookie-title {
+        font-size: 0.9rem; /* Smaller font size for title */
+    }
+
+    .cookie-description {
+        font-size: 0.8rem; /* Smaller font size for description */
+        margin-bottom: 5px; /* Space between description and buttons */
+    }
+
+    .cookie-buttons button {
+        padding: 5px 10px; /* Adjust button padding for smaller screens */
+        font-size: 0.75rem; /* Reduce button font size */
+    }
+
+    .cookie-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack grid items vertically */
+    }
+
+    .bottom-half {
+        flex-direction: column; /* Stack left and right halves vertically */
+        align-items: center; /* Center align for better appearance */
+    }
+
+    .left-half, .right-half {
+        width: 100%; /* Ensure both halves take full width */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .camera-image {
+        max-width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+
+.section3 {
+    display: flex; /* Use flexbox for layout */
+    min-height: 100vh; /* Maintain full height */
+    padding: 20px; /* Add padding around the whole section */
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%; /* Full width */
+}
+
+.blue-background {
+    background-color: rgb(224, 224, 252);
+    display: flex; /* Use flexbox for inner layout */
+    padding: 20px; /* Optional: padding for spacing inside the blue div */
+}
+
+.left-side {
+    flex: 0 0 40%; /* Fixed width of 40% */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Optional: padding for spacing */
+    text-align: center; /* Center text alignment */
+}
+
+.right-side {
+    flex: 0 0 60%; /* Fixed width of 60% */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-start; /* Align items at the top */
+    padding: 20px; /* Optional: padding for spacing */
+}
+
+.custom-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(3, auto); /* Three rows */
+    gap: 20px; /* Gap between grid items */
+    width: 100%; /* Full width of the right side */
+}
+
+.custom-grid-item {
+    display: flex; /* Flexbox for layout */
+    align-items: flex-start; /* Align items at the top */
+    background-color: white; /* Background for grid item */
+    border: 1px solid #ddd; /* Border for grid item */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding for content */
+}
+
+.icon-container2 {
+    width: 15%;
+    padding: 10px 0;
+    background-color: rgb(70, 70, 133);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px; /* Add margin to create a gap */
+}
+
+.icon {
+    color: white;
+    font-size: 16px;
+}
+
+.text-container {
+    width: 85%;
+    display: flex; /* Use flex for text container */
+    flex-direction: column; /* Arrange text in a column */
+}
+
+.custom-grid-heading {
+    font-size: 20px; /* Font size for heading */
+    margin: 5px 0; /* Margin above and below heading */
+}
+
+.custom-grid-content {
+    font-size: 16px; /* Font size for content */
+    line-height: 1.4; /* Line height for better readability */
+    margin: 5px 0; /* Margin for spacing */
+}
+
+.custom-grid-link {
+    font-size: 16px; /* Font size for link */
+    color: blue; /* Link color */
+    margin-top: 5px; /* Space above the link */
+}
+
+.section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 20px; /* Add padding around the section */
+}
+
+.centered-text {
+    text-align: center; /* Center text for headings */
+    margin-bottom: 5px; /* Add some margin for spacing */
+    font-weight: 600;
+    max-width: 550px;
+}
+.centered-heading {
+    text-align: center; /* Center text for headings */
+    margin-bottom: 25px; /* Add some margin for spacing */
+    font-weight: 700;
+}
+
+
+.centered-image {
+    display: block; /* Make sure the image is block level */
+    margin: 20px auto; /* Center the image and add vertical spacing */
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+   
+}
+
+.section5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding-bottom: 20px; /* Add bottom padding */
+    min-height: 100vh;
+}
+
+.centered-heading {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center; /* Center the rating and stars vertically */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.rating {
+    font-size: 24px; /* Larger font for rating */
+    color: darkblue; /* Dark blue color for the rating */
+    margin-right: 5px; /* Spacing between rating and stars */
+}
+
+.stars {
+    color: darkblue; /* Dark blue color for the stars */
+    font-size: 24px; /* Make stars larger */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center; /* Center search icon and input vertically */
+    position: relative; /* Position relative for the icon placement */
+    margin-top: 15px; /* Margin to separate from the reviews text */
+}
+
+.search-input {
+    padding: 10px 40px 10px 30px; /* Padding for the input (extra padding for the icon) */
+    border: 1px solid grey; /* Border for the input */
+    border-radius: 5px; /* Rounded corners */
+    color: grey; /* Grey color for the input text */
+    flex: 1; /* Allow input to take up remaining space */
+}
+
+.search-icon {
+    position: absolute; /* Position icon inside input */
+    left: 10px; /* Position it to the left */
+    color: grey; /* Grey color for the search icon */
+    font-size: 16px; /* Adjust size if needed */
+}
+
+.reviews-section {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Take full width */
+    margin-top: 20px; /* Space between the search bar and reviews section */
+}
+
+.reviews-count {
+    color: darkblue; /* Dark blue for the text */
+    text-decoration: underline; /* Underline for the text */
+}
+
+.reviews-number {
+    font-weight: bold; /* Bold for the number */
+}
+
+.dropdown {
+    padding: 8px; /* Padding for the dropdown */
+    border: 1px solid grey; /* Border for dropdown */
+    border-radius: 5px; /* Rounded corners */
+    background-color: white; /* Background color for dropdown */
+}
+
