@@ -13,15 +13,6 @@
     margin-bottom: 10px;
 }
 
-.section3{
-    display: flex;
-    min-height: 100vh;
-}
-.section4{
-    display: flex;
-    min-height: 100vh;
-}
-
 
 .top-half {
     flex: 1;
@@ -42,7 +33,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 100%;
+    width: 80%;
     gap: 10px;
 }
 
@@ -52,7 +43,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px;
 }
 
 .icon-container {
@@ -110,8 +100,10 @@
 
 .bottom-half {
     display: flex;
-    width: 100%; 
+    width: 80%; 
+    margin: 0 auto; /* Center the element horizontally */
 }
+
 
 .left-half {
     flex: 1; 
@@ -173,17 +165,6 @@
 
 .demo-button:hover {
     background-color: darkgreen; /* Change to darker green on hover */
-}
-
-
-
-.demo-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: lightgreen;
-    color: black;
-    border: none;
-    cursor: pointer;
 }
 
 
@@ -249,6 +230,7 @@
     animation: slide-in 0.5s forwards;
     border: 2px solid black;
     border-radius: 0;
+    z-index: 10;
 }
 
 .cookie-title {
@@ -358,7 +340,7 @@
 .section3 {
     display: flex; /* Use flexbox for layout */
     min-height: 100vh; /* Maintain full height */
-    padding: 20px; /* Add padding around the whole section */
+    padding: 50px; /* Add padding around the whole section */
 }
 
 .content-wrapper {
@@ -401,10 +383,7 @@
 .custom-grid-item {
     display: flex; /* Flexbox for layout */
     align-items: flex-start; /* Align items at the top */
-    background-color: white; /* Background for grid item */
-    border: 1px solid #ddd; /* Border for grid item */
-    border-radius: 8px; /* Rounded corners */
-    padding: 15px; /* Padding for content */
+    padding: 10px; /* Padding for content */
 }
 
 .icon-container2 {
@@ -416,6 +395,9 @@
     justify-content: center;
     align-items: center;
     margin-right: 10px; /* Add margin to create a gap */
+}
+.icon-container2 span {
+    color: white; /* Change text color to white */
 }
 
 .icon {
@@ -478,8 +460,8 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Center items horizontally */
-    padding-bottom: 20px; /* Add bottom padding */
-    min-height: 100vh;
+    min-height: 70vh;
+    padding:20px 50px;
 }
 
 .centered-heading {
@@ -710,6 +692,7 @@
 .story-title {
     font-size: 18px;
     margin: 10px 0 5px 0; 
+    font-weight: 600;
 }
 
 .story-description {
@@ -718,8 +701,8 @@
 }
 
 .section7 {
-    padding: 20px 20px; 
-    min-height: 100vh;
+    padding: 20px; 
+    min-height: 80vh;
     text-align: center;
 }
 

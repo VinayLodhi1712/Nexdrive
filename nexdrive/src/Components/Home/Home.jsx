@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
 import './Home.css'; // Import CSS for additional styling
 import cam from "../../assets/cam.png";
@@ -7,7 +7,10 @@ import news from "../../assets/news.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faVideo, faSearch, faDollarSign, faEyeSlash, faLocationDot, faAmbulance, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import FAQAccordion from './FAQAccordion';
-import Carousel from "./Carousel";
+import CustomCarousel from './CustomCarousel';
+import Footer from '../Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Home = () => {
     const [showCookieNotification, setShowCookieNotification] = useState(true);
 
@@ -15,7 +18,13 @@ const Home = () => {
     const [thumbsDownCount, setThumbsDownCount] = useState([2, 1, 0]);
     const [thumbsUpClicked, setThumbsUpClicked] = useState([false, false, false]);
     const [thumbsDownClicked, setThumbsDownClicked] = useState([false, false, false]);
-
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Duration of the animation in milliseconds
+          easing: 'ease-in-out', // Easing function
+          once: true, // Whether animation should happen only once
+        });
+      }, []);
     const increaseThumbsUp = (index) => {
         const newCounts = [...thumbsUpCount];
         newCounts[index] += 1;
@@ -71,10 +80,10 @@ const Home = () => {
             </div>
             <div className="section2">
 
-                <div className="top-half">
+                <div className="top-half"  data-aos="fade-up">
                     <h2 className="top-heading">Fleets face growing risks</h2>
                     <div className="grid-container">
-                        <div className="grid-item">
+                        <div className="grid-item" data-aos="fade-left">
                             <div className="icon-container">
                                 <FontAwesomeIcon icon={faClock} />
                             </div>
@@ -90,7 +99,7 @@ const Home = () => {
 
                         </div>
 
-                        <div className="grid-item">
+                        <div className="grid-item" data-aos="fade-right">
                             <div className="icon-container">
                                 <FontAwesomeIcon icon={faEyeSlash} />
                             </div>
@@ -104,7 +113,7 @@ const Home = () => {
 
                         </div>
 
-                        <div className="grid-item">
+                        <div className="grid-item" data-aos="fade-right">
                             <div className="icon-container">
                                 <FontAwesomeIcon icon={faDollarSign} />
                             </div>
@@ -120,7 +129,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="bottom-half">
+                <div className="bottom-half" data-aos="zoom-in">
                     <div className="left-half">
                         <img src={cam} alt="Camera" className="camera-image" />
                     </div>
@@ -172,21 +181,10 @@ const Home = () => {
                                                 <p className="custom-grid-link">Choose your dash cam →</p>
                                             </div>
                                         </div>
+
                                         <div className="custom-grid-item">
                                             <div className="icon-container2">
-                                                <FontAwesomeIcon icon={faAmbulance} className="icon" />
-                                            </div>
-                                            <div className="text-container">
-                                                <h3 className="custom-grid-heading">Real-time emergency alerts</h3>
-                                                <p className="custom-grid-content">
-                                                    Always be there for your loved ones. NexDrive alerts your emergency contacts in case of an accident.
-                                                </p>
-                                                <p className="custom-grid-link">Choose your dash cam →</p>
-                                            </div>
-                                        </div>
-                                        <div className="custom-grid-item">
-                                            <div className="icon-container2">
-                                                <FontAwesomeIcon className='icon' icon={['fas', 'circle']} style={{ marginRight: '5px' }} />
+                                                <FontAwesomeIcon className='icon' icon={['fas', 'circle']} />
                                                 <span>LIVE</span>
                                             </div>
                                             <div className="text-container">
@@ -199,13 +197,26 @@ const Home = () => {
                                         </div>
                                         <div className="custom-grid-item">
                                             <div className="icon-container2">
-                                                <FontAwesomeIcon className='icon' icon={['fas', 'car']} style={{ marginRight: '5px' }} />
+                                                <FontAwesomeIcon className='icon' icon={['fas', 'car']} />
                                                 <span>P</span>
                                             </div>
                                             <div className="text-container">
                                                 <h3 className="custom-grid-heading">Parking alerts</h3>
                                                 <p className="custom-grid-content">
                                                     Bump? Accident? Scratch? Our connected dash cams will catch it and send you an alert.
+                                                </p>
+                                                <p className="custom-grid-link">Choose your dash cam →</p>
+                                            </div>
+                                        </div>
+
+                                        <div className="custom-grid-item">
+                                            <div className="icon-container2">
+                                                <FontAwesomeIcon icon={faAmbulance} className="icon" />
+                                            </div>
+                                            <div className="text-container">
+                                                <h3 className="custom-grid-heading">Real-time emergency alerts</h3>
+                                                <p className="custom-grid-content">
+                                                    Always be there for your loved ones. NexDrive alerts your emergency contacts in case of an accident.
                                                 </p>
                                                 <p className="custom-grid-link">Choose your dash cam →</p>
                                             </div>
@@ -233,14 +244,14 @@ const Home = () => {
 
             </div>
 
-            <div className="section4">
+            <div className="section4" data-aos="fade-up">
                 <h5 className="centered-text">LIVE STREAM. LIVE ALERTS.</h5>
                 <h1 className="centered-heading">NexDrive Connect</h1>
                 <img src={fleet} alt="Fleet" className="centered-image" />
                 <h3 className="centered-text">Customers see up to 90% reduction in distracted driving, collisions, and losses.</h3>
             </div>
 
-            <div className="section5">
+            <div className="section5" data-aos="fade-up">
                 <h1 className='centered-heading'>Feedbacks</h1>
                 <div className="rating-container">
                     <span className="rating">4.8</span>
@@ -348,7 +359,7 @@ const Home = () => {
                 </div>
 
             </div>
-            <div className="section6">
+            <div className="section6" data-aos="fade-up">
                 <h1 className='centered-heading head3'>Real NexDrive Stories</h1>
                 <div className="stories-container">
                     <div className="story-box">
@@ -360,25 +371,25 @@ const Home = () => {
                     <div className="story-box">
                         <img src={news} alt="Story 1" className="story-image" />
 
-                        <p className="story-description">"There are three sides to every story. My story, the other driver;s story and the truth. Nexdrive gives you the truth."</p>
-                        <h3 className="story-title">Michael Gargan Merrick, New York</h3>
+                        <p className="story-description">"I sent the video to the insurane company, they completely reimbursed me for any of my costs."</p>
+                        <h3 className="story-title">Sierra Townsend. Cedartown, Georgia.</h3>
                     </div>
                     <div className="story-box">
                         <img src={news} alt="Story 1" className="story-image" />
 
-                        <p className="story-description">"There are three sides to every story. My story, the other driver;s story and the truth. Nexdrive gives you the truth."</p>
-                        <h3 className="story-title">Michael Gargan Merrick, New York</h3>
+                        <p className="story-description">"The NexDrive Dash cam video was all the proof I needed to show that I needed to show that I wasn't at fault."</p>
+                        <h3 className="story-title">Yorman Sanchez. Miramar, Florida.</h3>
                     </div>
                     <div className="story-box">
                         <img src={news} alt="Story 1" className="story-image" />
 
-                        <p className="story-description">"There are three sides to every story. My story, the other driver;s story and the truth. Nexdrive gives you the truth."</p>
-                        <h3 className="story-title">Michael Gargan Merrick, New York</h3>
+                        <p className="story-description">"Incrdibly comforting to know that we're going to find out why it happened, when it happened, how it happened."</p>
+                        <h3 className="story-title">William Rivers. Tampa, Florida</h3>
                     </div>
                 </div>
             </div>
 
-            <div className="section7">
+            <div className="section7" data-aos="fade-up">
                 <h1 className='centered-heading head3'>Frequently Asked Questions?</h1>
                 <div className="faq-container">
                     <FAQAccordion />
@@ -386,15 +397,11 @@ const Home = () => {
             </div>
 
 
-          <div className="section8">
-            <h1 className='centered-heading head3'>Trusted by over 800 brands</h1>
-            <Carousel />
-          </div>
-
-
-
-
-
+            <div className="section8" data-aos="fade-up">
+                <h1 className='centered-heading head3'>Trusted by over 800 brands</h1>
+                <CustomCarousel />
+                <Footer />
+            </div>
         </div>
     );
 };
