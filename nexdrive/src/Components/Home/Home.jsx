@@ -4,6 +4,9 @@ import './Home.css'; // Import CSS for additional styling
 import cam from "../../assets/cam.png";
 import fleet from "../../assets/fleet.png";
 import news from "../../assets/news.png";
+import acc2 from "../../assets/acc2.jpg";
+import acc3 from "../../assets/acc3.jpg";
+import acc4 from "../../assets/acc4.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faVideo, faSearch, faDollarSign, faEyeSlash, faLocationDot, faAmbulance, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import FAQAccordion from './FAQAccordion';
@@ -369,21 +372,21 @@ const Home = () => {
                         <h3 className="story-title">Michael Gargan Merrick, New York</h3>
                     </div>
                     <div className="story-box">
-                        <img src={news} alt="Story 1" className="story-image" />
+                        <img src={acc2} alt="Story 1" className="story-image" />
 
                         <p className="story-description">"I sent the video to the insurane company, they completely reimbursed me for any of my costs."</p>
                         <h3 className="story-title">Sierra Townsend. Cedartown, Georgia.</h3>
                     </div>
                     <div className="story-box">
-                        <img src={news} alt="Story 1" className="story-image" />
+                        <img src={acc3} alt="Story 1" className="story-image" />
 
                         <p className="story-description">"The NexDrive Dash cam video was all the proof I needed to show that I needed to show that I wasn't at fault."</p>
                         <h3 className="story-title">Yorman Sanchez. Miramar, Florida.</h3>
                     </div>
                     <div className="story-box">
-                        <img src={news} alt="Story 1" className="story-image" />
+                        <img src={acc4} alt="Story 1" className="story-image" />
 
-                        <p className="story-description">"Incrdibly comforting to know that we're going to find out why it happened, when it happened, how it happened."</p>
+                        <p className="story-description">"Incredibly comforting to know that we're going to find out why it happened, when it happened, how it happened."</p>
                         <h3 className="story-title">William Rivers. Tampa, Florida</h3>
                     </div>
                 </div>

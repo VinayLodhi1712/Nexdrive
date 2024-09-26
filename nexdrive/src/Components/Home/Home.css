@@ -160,6 +160,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     width: auto;
+   
 }
 
 
@@ -608,7 +609,7 @@
     margin-top: 10px; /* Space above the helpfulness section */
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Center items vertically */
-    justify-content: flex-end; /* Align all items to the right */
+    justify-content: flex-start; /* Align all items to the right */
 }
 
 .helpfulness-text {
