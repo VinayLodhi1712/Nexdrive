@@ -149,9 +149,6 @@ const Home = () => {
             </div>
             <div className="section3">
                 <div className="content-wrapper">
-                    <div className="blue-background">
-
-                        <div className="content-wrapper">
                             <div className="blue-background">
                                 <div className="left-side">
                                     <p className="connected-text">LTE DASH CAMS</p>
@@ -161,7 +158,7 @@ const Home = () => {
                                     <div className="custom-grid-container">
                                         <div className="custom-grid-item">
                                             <div className="icon-container2">
-                                                <FontAwesomeIcon icon={faVideo} className="icon" />
+                                                <FontAwesomeIcon icon={faVideo} className="icon live" />
                                             </div>
                                             <div className="text-container">
                                                 <h3 className="custom-grid-heading">4K & QHD video</h3>
@@ -174,7 +171,7 @@ const Home = () => {
 
                                         <div className="custom-grid-item">
                                             <div className="icon-container2">
-                                                <FontAwesomeIcon icon={faLocationDot} className="icon" />
+                                                <FontAwesomeIcon icon={faLocationDot} className="icon live" />
                                             </div>
                                             <div className="text-container">
                                                 <h3 className="custom-grid-heading">Live GPS tracking</h3>
@@ -188,7 +185,7 @@ const Home = () => {
                                         <div className="custom-grid-item">
                                             <div className="icon-container2">
                                                 <FontAwesomeIcon className='icon' icon={['fas', 'circle']} />
-                                                <span>LIVE</span>
+                                                <span className='live'>LIVE</span>
                                             </div>
                                             <div className="text-container">
                                                 <h3 className="custom-grid-heading">Remote video streaming</h3>
@@ -201,7 +198,7 @@ const Home = () => {
                                         <div className="custom-grid-item">
                                             <div className="icon-container2">
                                                 <FontAwesomeIcon className='icon' icon={['fas', 'car']} />
-                                                <span>P</span>
+                                                <span className='live'>P</span>
                                             </div>
                                             <div className="text-container">
                                                 <h3 className="custom-grid-heading">Parking alerts</h3>
@@ -214,7 +211,7 @@ const Home = () => {
 
                                         <div className="custom-grid-item">
                                             <div className="icon-container2">
-                                                <FontAwesomeIcon icon={faAmbulance} className="icon" />
+                                                <FontAwesomeIcon icon={faAmbulance} className="icon live" />
                                             </div>
                                             <div className="text-container">
                                                 <h3 className="custom-grid-heading">Real-time emergency alerts</h3>
@@ -226,7 +223,7 @@ const Home = () => {
                                         </div>
                                         <div className="custom-grid-item">
                                             <div className="icon-container2">
-                                                <FontAwesomeIcon icon={faFileAlt} className="icon" />
+                                                <FontAwesomeIcon icon={faFileAlt} className="icon live" />
                                             </div>
                                             <div className="text-container">
                                                 <h3 className="custom-grid-heading">Easily share proof</h3>
@@ -237,8 +234,7 @@ const Home = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                            
                         </div>
 
                     </div>

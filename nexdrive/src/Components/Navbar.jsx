@@ -3,7 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -22,73 +21,72 @@ function NavBar() {
 
   return (
     <Navbar
-    expanded={expand}
-    fixed="top"
-    expand="md"
-    className={navColour ? "sticky" : "navbar"}
-  >
-    <Container>
-      <div className="d-flex justify-content-center align-items-center">
-        <Navbar.Brand href="/" className="d-flex">
-          <div
-            className="d-flex align-items-center"
+      expanded={expand}
+      fixed="top"
+      expand="md"
+      className={navColour ? "sticky" : "navbar"}
+    >
+      <Container>
+        {/* Align logo to the left */}
+        <Navbar.Brand href="/" className="d-flex align-items-center">
+          <img
+            src={logo}
+            className="img-fluid logo"
+            alt="brand"
             onClick={() => {
               window.scrollTo(0, 0);
             }}
-          >
-            <img src={logo} className="img-fluid logo" alt="brand" />
-          </div>
+          />
         </Navbar.Brand>
+
+        {/* Push toggle to the right using ms-auto and add margin-right */}
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
             updateExpanded(expand ? false : "expanded");
           }}
+          className="ms-auto me-4"  // Added `me-3` to ensure it doesn't go out of the frame
         >
           <span></span>
           <span></span>
           <span></span>
         </Navbar.Toggle>
-      </div>
-  
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="ms-auto" defaultActiveKey="#home">
-          <Nav.Item>
-            <Nav.Link as={Link} to="/fleetsolutions" onClick={() => updateExpanded(false)}>
-              Fleet soultions
-            </Nav.Link>
-          </Nav.Item>
-  
-          <Nav.Item>
-            <Nav.Link as={Link} to="/Industries" onClick={() => updateExpanded(false)}>
-              Industries
-            </Nav.Link>
-          </Nav.Item>
-  
-          <Nav.Item>
-            <Nav.Link as={Link} to="/blogs" onClick={() => updateExpanded(false)}>
-              Blogs
-            </Nav.Link>
-          </Nav.Item>
-  
-          <Nav.Item>
-            <Nav.Link as={Link} to="/support" onClick={() => updateExpanded(false)}>
-              Support
-            </Nav.Link>
-          </Nav.Item>
 
-          <Nav.Item>
-            <Nav.Link as={Link} to="/support" onClick={() => updateExpanded(false)}>
-              Contact us
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
-  
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto" defaultActiveKey="#home">
+            <Nav.Item>
+              <Nav.Link as={Link} to="/fleetsolutions" onClick={() => updateExpanded(false)}>
+                Fleet solutions
+              </Nav.Link>
+            </Nav.Item>
 
-  
+            <Nav.Item>
+              <Nav.Link as={Link} to="/industries" onClick={() => updateExpanded(false)}>
+                Industries
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link as={Link} to="/blogs" onClick={() => updateExpanded(false)}>
+                Blogs
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link as={Link} to="/support" onClick={() => updateExpanded(false)}>
+                Support
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link as={Link} to="/contact" onClick={() => updateExpanded(false)}>
+                Contact us
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 

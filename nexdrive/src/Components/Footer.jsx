@@ -63,7 +63,7 @@ export default function Footer() {
 
         <section className=''>
           <MDBRow>
-            <MDBCol lg='3' md='6' className='mb-4 mb-md-0' style={{ textAlign: 'left' }}>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0 text-md-start text-center'>
               <h5 style={{ color: '#fff' }}>Home</h5>
               <ul className='list-unstyled mb-0'>
                 <li>
@@ -89,7 +89,7 @@ export default function Footer() {
               </ul>
             </MDBCol>
 
-            <MDBCol lg='3' md='6' className='mb-4 mb-md-0' style={{ textAlign: 'left' }}>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0 text-md-start text-center'>
               <h5 style={{ color: '#fff' }}>Solutions</h5>
               <ul className='list-unstyled mb-0'>
                 <li>
@@ -115,7 +115,7 @@ export default function Footer() {
               </ul>
             </MDBCol>
 
-            <MDBCol lg='3' md='6' className='mb-4 mb-md-0' style={{ textAlign: 'left' }}>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0 text-md-start text-center'>
               <h5 style={{ color: '#fff' }}>Industries</h5>
               <ul className='list-unstyled mb-0'>
                 <li>
@@ -151,7 +151,7 @@ export default function Footer() {
               </ul>
             </MDBCol>
 
-            <MDBCol lg='3' md='6' className='mb-4 mb-md-0' style={{ textAlign: 'left' }}>
+            <MDBCol lg='3' md='6' className='mb-4 mb-md-0 text-md-start text-center'>
               <h5 style={{ color: '#fff' }}>Resources</h5>
               <ul className='list-unstyled mb-0'>
                 <li>
@@ -179,33 +179,23 @@ export default function Footer() {
           </MDBRow>
         </section>
 
-        {/* Horizontal Line */}
         <hr style={{ borderTop: '1px solid #fff' }} />
 
-        {/* Right-aligned footer links */}
-        <div className='d-flex justify-content-end' style={{ color: '#fff', fontSize: '0.9rem' }}>
-          <span style={{ margin: '0 10px' }}>|</span>
+        <div className='d-flex flex-column flex-md-row justify-content-center justify-content-md-end text-center text-md-end' style={{ color: '#fff', fontSize: '0.9rem', padding: '10px 0' }}>
           <a href='#!' className='text-white footer-policy-link' style={{ textDecoration: 'underline', marginRight: '10px' }}>Privacy Policy</a>
-          <span style={{ margin: '0 10px' }}>|</span>
           <a href='#!' className='text-white footer-policy-link' style={{ textDecoration: 'underline', marginRight: '10px' }}>Terms of Service</a>
-          <span style={{ margin: '0 10px' }}>|</span>
           <a href='#!' className='text-white footer-policy-link' style={{ textDecoration: 'underline', marginRight: '10px' }}>Cookie Policy</a>
-          <span style={{ margin: '0 10px' }}>|</span>
           <a href='#!' className='text-white footer-policy-link' style={{ textDecoration: 'underline', marginRight: '10px' }}>Cookie Settings</a>
-          <span style={{ margin: '0 10px' }}>|</span>
           <a href='#!' className='text-white footer-policy-link' style={{ textDecoration: 'underline', marginRight: '10px' }}>Purchase Policy</a>
-          <span style={{ margin: '0 10px' }}>|</span>
-          <a href='#!' className='text-white footer-policy-link' style={{ textDecoration: 'underline' }}>Return Policy</a>
-          <span style={{ margin: '0 10px' }}>|</span>
+          <a href='#!' className='text-white footer-policy-link' style={{ textDecoration: 'underline', marginRight: '10px' }}>Return Policy</a>
         </div>
-
 
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: '#2d1950', color: '#fff', fontSize: '1.2rem' }}>
         © 2024 @
         <a className='text-white' href='https://mdbootstrap.com/'>
-          All Rights Resevered
+          All Rights Reserved
         </a>
       </div>
     </MDBFooter>

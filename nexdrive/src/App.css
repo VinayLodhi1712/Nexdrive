@@ -35,26 +35,30 @@ body, .home-container {
 /* Non-sticky navbar background */
 .navbar {
   position: fixed !important;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Align logo to left, toggle to right */
+  align-items: center; /* Vertical alignment */
   transition: all 0.3s ease-out 0s !important;
-  padding: 0.6rem 2rem !important; /* Increased padding to increase height */
+  padding: 0.6rem 2rem !important;
   font-size: 1.2rem !important;
   background-color: #2d1950 !important; /* Dark purple, slightly transparent */
-  height: 80px; /* Increased height for better visibility */
-  z-index: 10; /* Make sure the navbar is always on top */
+  height: 80px;
+  z-index: 10;
 }
 
 /* Resize the logo to a larger, professional size */
 .navbar .logo {
-  background-color: white; /* White background for the logo */
-  padding: 1px; /* Add padding to give it space around */
-  border-radius: 1px; /* Optional: Add border radius for a more modern look */
+  background-color: white;
+  padding: 1px;
+  border-radius: 1px;
   width: 180px !important; /* Keep the logo size proportional */
-  height: auto !important; /* Maintain aspect ratio */
+  height: auto !important;
 }
 
 /* Navbar toggle button */
 .navbar-toggler {
-  position: relative !important;
   background-color: transparent !important;
   border-color: transparent !important;
 }
@@ -67,65 +71,70 @@ body, .home-container {
   margin-top: 5px !important;
   margin-bottom: 5px !important;
   transform: rotate(0deg) !important;
-  left: 0 !important;
   opacity: 1 !important;
 }
 
 /* White color for navbar icons/links */
 .navbar .nav-link {
-  color: #fff !important; /* White color for links */
-  font-size: 1.2rem !important; /* Slightly increase font size for better visibility */
+  color: #fff !important;
+  font-size: 1.2rem !important;
   transition: color 0.3s ease !important;
 }
 
 /* On hover, change the color */
 .navbar .nav-link:hover {
-  color: #e0e0e0 !important; /* Light gray on hover */
+  color: #e0e0e0 !important;
 }
 
 /* Use margin for space between navbar items */
 .navbar .nav-item {
-  margin: 0 20px; /* Add 20px margin on both sides of each nav item */
+  margin: 0 20px;
 }
 
-/* Navbar items on mobile (collapsed state) */
+/* For responsiveness: ensure logo is on left and toggle on right */
 @media (max-width: 768px) {
   body, .home-container {
-    padding-top: 60px; /* Adjust based on your Navbar height */
-  }
-  
-  .navbar {
-    padding: 0.5rem 1.5rem !important; /* Adjust padding for mobile */
-    height: auto !important; /* Allow the navbar to expand to fit content */
-    background-color: #2d1950 !important; /* Ensure navbar background remains visible in mobile mode */
+    padding-top: 60px;
   }
 
-  /* Make the logo smaller for mobile */
+  /* Responsive behavior for the navbar */
+  .navbar {
+    padding: 0.5rem 1.5rem !important;
+    height: auto !important;
+    background-color: #2d1950 !important;
+    justify-content: space-between;
+  }
+
+  /* Logo aligned to the left */
   .navbar .logo {
-    width: 150px !important; /* Reduce logo size for mobile */
+    margin-left: 0 !important;
+    width: 150px !important; /* Slightly smaller logo for mobile */
+  }
+
+  /* Ensure the toggle button is aligned to the right */
+  .navbar-toggler {
+    margin-left: auto; /* Push the toggle button to the right */
   }
 
   /* Adjust margin between nav items for mobile */
   .navbar .nav-item {
-    margin: 10px 0; /* Adjust margin for mobile to add space between vertical items */
+    margin: 10px 0;
   }
 
-  /* Make sure navbar links are visible and take up full width */
+  /* Full-width links in the navbar */
   .navbar .nav-link {
     color: white !important;
     text-align: left;
-    width: 100%; /* Make links span the full width of the navbar */
-    padding: 10px 0 !important; /* Add padding for better touch targets */
-    background-color: transparent; /* Ensure background is transparent */
+    width: 100%; /* Full width of the navbar */
+    padding: 10px 0 !important;
+    background-color: transparent;
   }
 
-  /* Navbar background color when expanded in mobile */
   .navbar-collapse {
-    background-color: #2d1950 !important; /* Ensure background color in mobile-expanded view */
+    background-color: #2d1950 !important;
   }
 
-  /* Add background for toggle button when expanded */
   .navbar-toggler.collapsed {
-    background-color: #4b0082 !important; /* Dark purple for toggle button when collapsed */
+    background-color: #4b0082 !important;
   }
 }
